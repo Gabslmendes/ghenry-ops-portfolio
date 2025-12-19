@@ -1,16 +1,53 @@
-# React + Vite
+# <Ghenry.ops /> - Portfólio Pessoal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Project Status](https://img.shields.io/badge/status-active-success)
+![Deploy](https://img.shields.io/badge/deploy-AWS%20S3-orange)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB)
 
-Currently, two official plugins are available:
+## 💻 Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este repositório contém o código-fonte do meu portfólio pessoal, desenvolvido para demonstrar minhas competências em **Desenvolvimento Fullstack** e **Cloud Computing**.
 
-## React Compiler
+O objetivo não foi apenas criar uma página bonita, mas construir uma aplicação moderna, performática e hospedada utilizando infraestrutura em nuvem real.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> **Acesse online:** [Cole o Link do Seu Site S3 Aqui]
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🎨 Design & UI
+
+O projeto segue o conceito de **Minimalismo Brutalista** e **Bento Grid**:
+
+- **Intro Animada:** Efeito de digitação (Typewriter) sincronizado com barra de carregamento.
+- **Bento Grid Layout:** Organização modular dos projetos inspirada em dashboards.
+- **Dark Mode Premium:** Paleta de cores escura com acentos em Laranja Internacional (`#FF5500`) e textura de ruído (noise texture).
+- **Glassmorphism:** Efeitos de vidro nos modais e menus.
+
+---
+
+## 🛠️ Stack Tecnológica
+
+### Frontend
+- **React.js:** Biblioteca principal para construção da interface.
+- **Vite:** Build tool para performance extrema.
+- **CSS Modules:** Estilização pura e performática sem dependência de frameworks pesados.
+- **Lucide React:** Biblioteca de ícones leves.
+
+### Infraestrutura & Cloud
+- **AWS S3:** Hospedagem estática do site (Bucket policy configurada para acesso público).
+- **Git & GitHub:** Versionamento de código.
+
+---
+
+## 📂 Estrutura de Pastas
+
+```bash
+portfolio-gabriel/
+├── public/          # Assets estáticos
+├── src/
+│   ├── assets/      # Imagens e ícones
+│   ├── App.jsx      # Lógica principal e Estrutura
+│   ├── index.css    # Estilização Global e Animações
+│   └── main.jsx     # Ponto de entrada React
+├── package.json     # Dependências
+└── vite.config.js   # Configuração do Vite
