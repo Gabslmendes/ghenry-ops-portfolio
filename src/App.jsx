@@ -151,19 +151,26 @@ function App() {
         </section>
 
         {/* 4. PROJETOS (Bento Grid) */}
-        <section id="projetos" className="grid-container">
-          {projects.map((project) => (
-            <div key={project.id} className={`card ${project.className}`} onClick={() => setSelectedProject(project)}>
-              <div className="card-icon">{project.icon}</div>
-              <div>
-                <h3>{project.title}</h3>
-                <p style={{color: '#666', fontSize: '0.9rem', fontFamily:'monospace'}}>{project.subtitle}</p>
+        <section id="projetos" style={{maxWidth: '1200px', margin: '200px auto'}}>
+          <div style={{padding: '0 20px', marginBottom: '40px'}}>
+            <span className="badge">/// 03 — MEUS PROJETOS</span>
+            <h2 style={{fontSize: '2.5rem', fontWeight: '300'}}>O que tenho construído.</h2>
+          </div>
+
+          <div className="grid-container" style={{margin: 0}}>
+            {projects.map((project) => (
+              <div key={project.id} className={`card ${project.className}`} onClick={() => setSelectedProject(project)}>
+                <div className="card-icon">{project.icon}</div>
+                <div>
+                  <h3>{project.title}</h3>
+                  <p style={{color: '#666', fontSize: '0.9rem', fontFamily:'monospace'}}>{project.subtitle}</p>
+                </div>
+                <div className="tags">
+                  {project.tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
+                </div>
               </div>
-              <div className="tags">
-                {project.tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </section>
 
         {/* 5. SEÇÃO CONTATO */}
