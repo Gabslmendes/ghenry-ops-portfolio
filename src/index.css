@@ -1,5 +1,6 @@
 /* ARQUIVO: src/index.css */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap');
 
 html {
   scroll-behavior: smooth; /* Garante que a rolagem seja suave */
@@ -42,10 +43,17 @@ body {
   transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
 }
 .intro-text {
-  display: inline-block; font-family: 'Inter', sans-serif; font-weight: 300; font-size: 2rem; color: white;
-  --intro-target-width: 26ch; /* Largura exata do texto para o cursor parar na última letra */
-  overflow: hidden; white-space: nowrap; 
-  border-right: 2px solid var(--accent-color); /* Cursor Laranja */
+  display: inline-block; 
+  font-family: 'Satoshi', sans-serif; 
+  font-weight: 500; 
+  font-size: 2rem; 
+  color: white;
+  
+  --intro-target-width: 26ch; 
+  overflow: hidden; 
+  white-space: nowrap; 
+  border-right: 2px solid var(--accent-color);
+  
   animation: typing 2.5s steps(26, end), blink 0.75s step-end infinite;
 }
 .intro-hidden { transform: translateY(-100%); }
@@ -73,7 +81,10 @@ body {
   padding: 0 3rem; z-index: 100; mix-blend-mode: difference;
 }
 .logo { 
-  font-family: 'Space Mono', monospace; font-size: 1.2rem; letter-spacing: -1px; font-weight: 700;
+  font-family: 'Satoshi', sans-serif; 
+  font-size: 1.3rem; 
+  letter-spacing: -0.5px; 
+  font-weight: 700; 
 }
 .nav-links { display: flex; gap: 30px; }
 .nav-links a { 

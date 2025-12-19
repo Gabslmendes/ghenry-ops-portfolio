@@ -1,0 +1,40 @@
+name: Deploy to AWS S3
+
+on:
+  push:
+    branches:
+      - main  # Ou 'master', dependendo do nome da sua branch principal
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Baixa o seu código
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Instala o Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Usa uma versão estável
+
+      # 3. Instala as dependências e gera o Build
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build
+
+      # 4. Configura as credenciais da AWS (pega do cofre do GitHub)
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-2  # <--- CONFIRA SE SUA REGIÃO É ESSA MESMO
+
+      # 5. Sobe os arquivos da pasta 'dist' para o Bucket S3
+      - name: Deploy to S3
+        run: aws s3 sync ./dist s3://ghenry-ops-portfolio --delete
+        # TROQUE 'NOME-DO-SEU-BUCKET' PELO NOME REAL DO SEU BUCKET
