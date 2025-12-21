@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Database, Code, Layout, Server, X, User, ChevronRight, Send, MessageCircle } from 'lucide-react';
+import fotoPerfil from './assets/image/retrato.png';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -122,7 +123,11 @@ function App() {
         {/* 3. SEÇÃO SOBRE MIM */}
         <section id="sobre" className="about-section">
           <div className="about-image">
-            <User size={64} color="#333" strokeWidth={1} />
+            <img 
+              src={fotoPerfil} 
+              alt="Foto de Gabriel Henrique" 
+              className="minha-foto" 
+            />
           </div>
           <div className="about-content">
             <span className="badge">/// 02 — SOBRE MIM</span>
@@ -135,11 +140,11 @@ function App() {
             </p>
             <div className="about-stats">
               <div className="stat">
-                <strong>+3</strong>
+                <strong>+5</strong>
                 <span>ANOS EM TI</span>
               </div>
               <div className="stat">
-                <strong>15+</strong>
+                <strong>+15</strong>
                 <span>PROJETOS</span>
               </div>
               <div className="stat">

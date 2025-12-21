@@ -15,6 +15,13 @@ html {
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* Aplica Satoshi em todos os níveis de título */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
 section {
   scroll-margin-top: 120px; /* Altura do Header (80px) + 40px de sobra */
 }
@@ -161,6 +168,15 @@ body {
 .stat strong { display: block; font-size: 2.5rem; color: var(--accent-color); font-weight: 300; }
 .stat span { font-size: 0.8rem; color: #666; font-family: 'Space Mono', monospace; }
 
+/* --- FOTO DE PERFIL --- */
+.minha-foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%; 
+}
+
+
 /* --- CARROSSEL INFINITO (MARQUEE) --- */
 .marquee-wrapper {
   width: 100%; overflow: hidden; white-space: nowrap;
@@ -286,4 +302,28 @@ body {
   section {
     scroll-margin-top: 100px; /* Ajuste para header mobile */
   }
+
+  /* --- Correção de Responsividade (Mobile) --- */
+
+  /* 1. Zera o Grid Container */
+  .grid-container {
+    /* Força uma única coluna que ocupa 100% da largura */
+    grid-template-columns: 1fr !important;
+    
+    /* Ajusta o espaçamento entre os cards (opcional) */
+    gap: 20px; 
+  }
+
+  /* 2. Zera os Itens do Grid */
+  .card {
+    /* Remove qualquer 'grid-column: span 2' que faz eles esticarem */
+    grid-column: auto !important;
+    grid-row: auto !important;
+    
+    /* Garante que o card não seja mais largo que a tela */
+    max-width: 100%;
+  }
+
+  .card-wide { grid-column: auto !important; }
+  .card-tall { grid-row: auto !important; }
 }

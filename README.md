@@ -10,7 +10,7 @@ Este repositório contém o código-fonte do meu portfólio pessoal, desenvolvid
 
 O objetivo não foi apenas criar uma página bonita, mas construir uma aplicação moderna, performática e hospedada utilizando infraestrutura em nuvem real.
 
-> **Acesse online:** [Cole o Link do Seu Site S3 Aqui]
+> **Acesse online:** d2tp0hdw35pl9h.cloudfront.net
 
 ---
 
