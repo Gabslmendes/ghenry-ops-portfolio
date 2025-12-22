@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Database, Code, Layout, Server, X, User, ChevronRight, Send, MessageCircle } from 'lucide-react';
+import { Database, Code, Layout, Server, X, User, ChevronRight, Send, MessageCircle, ArrowUp } from 'lucide-react';
 import fotoPerfil from './assets/image/retrato.png';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [showIntro, setShowIntro] = useState(true);
+  const [showScrollBtn, setShowScrollBtn] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -12,6 +13,26 @@ function App() {
     }, 4100);
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowScrollBtn(true);
+      } else {
+        setShowScrollBtn(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   // Lista de Tecnologias para o Carrossel (Duplicada para o efeito infinito)
   const techStack = [
@@ -183,7 +204,7 @@ function App() {
           <span className="badge">/// 04 — CONTATO</span>
           <h2 style={{fontSize: '2.5rem', fontWeight: '300', marginBottom:'20px'}}>Vamos Trabalhar Juntos?</h2>
           <p style={{color:'#888', marginBottom: '40px'}}>
-            Prefere um papo rápido? Me chame no WhatsApp ou preencha o formulário abaixo.
+            Prefere um papo rápido? Me chame no WhatsApp ou envie um email.
           </p>
           
           {/* Botão WhatsApp */}
@@ -202,21 +223,9 @@ function App() {
             <div style={{flex: 1, height: '1px', background: '#222'}}></div>
           </div>
           
-          <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
-            <div>
-              <label>NOME</label>
-              <input type="text" placeholder="Seu nome completo" />
-            </div>
-            <div>
-              <label>EMAIL</label>
-              <input type="email" placeholder="seu@email.com" />
-            </div>
-            <div>
-              <label>MENSAGEM</label>
-              <textarea placeholder="Conte sobre seu projeto..." rows="4"></textarea>
-            </div>
-            <button type="submit" className="btn-submit">ENVIAR MENSAGEM</button>
-          </form>
+          <a href="mailto:gabriel.henrrique2001@gmail.com" className="btn-email">
+            <Send size={20} /> gabriel.henrrique2001@gmail.com
+          </a>
         </section>
 
         {/* Modal Case Study */}
@@ -252,6 +261,14 @@ function App() {
           <div style={{fontFamily:'Space Mono', fontSize:'0.8rem', color:'#444'}}>© 2025 BRASÍLIA/DF</div>
           <div style={{fontFamily:'Space Mono', fontSize:'0.8rem', color:'#444'}}>GHENRY.OPS</div>
         </footer>
+
+        {/* Botão Voltar ao Topo */}
+        <button 
+          className={`scroll-to-top ${showScrollBtn ? 'visible' : ''}`} 
+          onClick={scrollToTop}
+        >
+          <ArrowUp size={24} />
+        </button>
 
       </div>
     </div>
