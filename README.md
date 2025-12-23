@@ -1,4 +1,4 @@
-# <Ghenry.ops /> - Portfólio Pessoal
+# <Henry.ops /> - Portfólio Pessoal
 
 ![Project Status](https://img.shields.io/badge/status-active-success)
 ![Deploy](https://img.shields.io/badge/deploy-AWS%20S3-orange)

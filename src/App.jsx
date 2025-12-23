@@ -109,7 +109,7 @@ function App() {
         {/* Navbar */}
         <nav className="navbar">
           <div className="logo">
-            Ghenry<span style={{ color: '#FF5500' }}>.ops</span>
+            Henry<span style={{ color: '#FF5500' }}>.ops</span>
           </div>
           <div className="nav-links">
             <a href="#sobre">Sobre</a>
@@ -259,7 +259,7 @@ function App() {
 
         <footer style={{padding: '50px 3rem', borderTop: '1px solid #222', display:'flex', justifyContent:'space-between', alignItems:'center'}}>
           <div style={{fontFamily:'Space Mono', fontSize:'0.8rem', color:'#444'}}>© 2025 BRASÍLIA/DF</div>
-          <div style={{fontFamily:'Space Mono', fontSize:'0.8rem', color:'#444'}}>GHENRY.OPS</div>
+          <div style={{fontFamily:'Space Mono', fontSize:'0.8rem', color:'#444'}}>HENRY.OPS</div>
         </footer>
 
         {/* Botão Voltar ao Topo */}
