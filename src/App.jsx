@@ -95,7 +95,7 @@ function App() {
       <div className={`intro-screen ${!showIntro ? 'intro-hidden' : ''}`}>
         <h1 className="intro-text">
           Gabriel Henrique
-          <span className="portfolio-highlight">Portfolio</span>
+          <span className="portfolio-highlight">Portfólio</span>
         </h1>
         
         {/* A BARRA DE CARREGAMENTO */}
