@@ -43,14 +43,39 @@ function App() {
   const projects = [
     {
       id: 1,
-      title: "Marketplace de Veículos",
-      subtitle: "Backend & Integração XML",
-      tags: ["Node.js", "AWS", "Backend"],
+      title: "Minha Capital Carros",
+      subtitle: "Marketplace de carros",
+      tags: [
+        "Django + DRF (backend, API REST, auth)",
+        "PostgreSQL ",
+        "React (frontend)",
+        "Docker Compose",
+        "AWS EC2",
+        "AWS Parameter Store",
+        "AWS Cloudfront",
+        "AWS Route 53",
+        "django-storages + AWS S3",
+        "django-filter"
+      ],
       icon: <Database size={32} strokeWidth={1} />,
       className: "card-wide",
-      description: "Sistema completo para venda de veículos. Backend e API integrando XMLs de concessionárias, planejado para escalabilidade.",
-      challenge: "Unificar estoques de diversas concessionárias que enviavam dados em formatos XML despadronizados e inconsistentes.",
-      solution: ["Microsserviço em Node.js para ingestão e sanitização.", "API Restful segura para consumo do Frontend.", "Arquitetura Cloud-Ready (AWS S3 + EC2)."]
+      description: (
+        <>
+          Sistema completo para compra e venda de veículos.<br />
+          <a href="https://minhacapitalcarros.com.br" target="_blank" rel="noopener noreferrer" style={{color:'#FF5500', textDecoration:'underline'}}>minhacapitalcarros.com.br</a><br />
+          Backend robusto, API REST, frontend moderno e infraestrutura escalável.
+        </>
+      ),
+      challenge: "Criar um marketplace de carros com autenticação, filtros avançados, upload de imagens e ambiente de produção seguro.",
+      solution: [
+        "Django + Django REST Framework para backend, autenticação por sessão e API.",
+        "Banco de dados SQLite (local) e PostgreSQL (produção).",
+        "Frontend moderno em React.",
+        "Orquestração com Docker Compose para backend, frontend e banco de dados.",
+        "Hospedagem em AWS EC2.",
+        "django-filter para filtros avançados na API.",
+        "django-storages + boto3 (planejado) para upload de imagens em AWS S3."
+      ]
     },
     {
       id: 2,
@@ -65,12 +90,17 @@ function App() {
     },
     {
       id: 3,
-      title: "Design Institucional",
-      subtitle: "Interface & UX",
+      title: "Site Institucional",
+      subtitle: "Cartório 5º Ofício de Notas de Taguatinga",
       tags: ["React", "Figma"],
       icon: <Layout size={32} strokeWidth={1} />,
       className: "",
-      description: "Redesign completo do site do 5º Ofício de Notas focado na experiência do usuário.",
+      description: (
+        <>
+          Redesign completo do site do 5º Ofício de Notas focado na experiência do usuário.<br />
+          <a href="https://cartorio5df.com.br" target="_blank" rel="noopener noreferrer" style={{color:'#FF5500', textDecoration:'underline'}}>cartorio5df.com.br</a>
+        </>
+      ),
       challenge: "Modernizar a identidade visual garantindo acessibilidade e performance mobile.",
       solution: ["Prototipação Mobile-First no Figma.", "Desenvolvimento em React SPA.", "Design System consistente."]
     },
@@ -165,7 +195,7 @@ function App() {
                 <span>ANOS EM TI</span>
               </div>
               <div className="stat">
-                <strong>+15</strong>
+                <strong>+10</strong>
                 <span>PROJETOS</span>
               </div>
               <div className="stat">
